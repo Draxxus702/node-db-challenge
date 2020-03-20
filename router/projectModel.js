@@ -47,9 +47,9 @@ function addResources(resource){
   }
 
 
-  function getTheRightTasks(id){
-      return db('tasks')
-    .join('tasks, projects.id, tasks.project_id ')
-    .select('tasks.id', "projects.project_name", "projects.project_description")
-    .where('tasks.project_id', id)
+  function getTheRightTasks(){
+    return db("projects")
+    .join("tasks", "projects.id", "tasks.project_id")
+    .select("tasks.id", "tasks.task", "tasks.instructions", "projects.project_name",  "projects.project_description")
+    // .where('tasks.project_id', id)
   }

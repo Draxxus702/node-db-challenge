@@ -24,17 +24,17 @@ router.get('/resources', (req,res) => {
     })
 })
 
-router.get('/tasks', (req,res) =>{
-    project.getTasks()
-    .then(param =>{
-        res.json(param)
-    })
-    .catch(err =>{
-        res.status(500).json({errorMessage: 'Failed to retrieve tasks'})
-    })
-})
+// router.get('/tasks', (req,res) =>{
+//     project.getTasks()
+//     .then(param =>{
+//         res.json(param)
+//     })
+//     .catch(err =>{
+//         res.status(500).json({errorMessage: 'Failed to retrieve tasks'})
+//     })
+// })
 
-router.get('/tasks/:id', (req,res) =>{
+router.get('/tasks', (req,res) =>{
     const id = req.params.id
 
     project.getTheRightTasks(id)
