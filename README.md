@@ -39,13 +39,16 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
+Sql, defines and manipulates data based structured query language.
 
 - [ ] Why do tables need a `primary key`?
+  Each database needs a primary key because it ensures row level accessibility.
 
 - [ ] What is the name given to a table column that references the primary key on another table.
+  foreign key
 
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
-
+  put an intermediary table
 ## Minimum Viable Product
 
 Take the steps necessary to complete the project from scratch. Start by initializing your project with a `package.json` and go from there.
@@ -57,11 +60,18 @@ Complete the following tasks:
   - [ ] a `task` belongs to only one `project`.
   - [ ] a `project` can use multiple `resources`. Example of `resources` are: computer, conference room, microphone, delivery van.
   - [ ] the same `resource` can be used in multiple `projects`.
+  
   - [ ] when adding `projects` the client must provide a name, the description is optional.
+
   - [ ] when adding `resources` the client must provide a name, the description is optional.
+
   - [ ] when adding a `task` the client must provide a description, the notes are optional.
+
   - [ ] when adding a `task` the client must provide the `id` of an existing project.
+
   - [ ] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
+
+
 - [ ] Build an API with endpoints for:
   - [ ] adding resources.
   - [ ] retrieving a list of resources.
